@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <title>Nyír – Tulajdonságok</title>
+  <style>
+    body {
+      background-color: #001a4d;
+      color: white;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #002366;
+      padding: 20px 0 10px 0;
+      text-align: center;
+    }
+    header h1 {
+      color: #FFD700;
+      margin: 0 0 10px 0;
+    }
+    nav {
+      margin: 10px 0 20px 0;
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .nav-btn {
+      background: #FFD700;
+      color: #002366;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 18px;
+      font-size: 1em;
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.2s, color 0.2s;
+      box-shadow: 0 2px 8px #0002;
+    }
+    .nav-btn:hover, .nav-btn.active {
+      background: #002366;
+      color: #FFD700;
+      border: 1px solid #FFD700;
+    }
+    main {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 30px 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      background: #002366;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    table, th, td {
+      border: 1px solid #001a4d;
+    }
+    th, td {
+      padding: 10px;
+      text-align: left;
+    }
+    th {
+      background: #003399;
+      color: #FFD700;
+    }
+    .fa-minta-dot {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      margin-right: 12px;
+      vertical-align: middle;
+      border: 2px solid #fff;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    .fa-nev {
+      font-weight: bold;
+      color: #fff;
+    }
+    footer {
+      background: #002366;
+      color: #FFD700;
+      text-align: center;
+      padding: 18px 0 10px 0;
+      margin-top: 40px;
+      font-size: 1rem;
+    }
+    @media (max-width: 700px) {
+      main {
+        padding: 10px;
+      }
+      table, th, td {
+        font-size: 14px;
+      }
+      nav {
+        gap: 6px;
+      }
+      .nav-btn {
+        padding: 8px 10px;
+        font-size: 0.95em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Nyír</h1>
+    <nav>
+      <a href="index.html" class="nav-btn">Főoldal</a>
+      <a href="festekek.html" class="nav-btn">Festékek</a>
+      <a href="faanyagok.html" class="nav-btn">Faanyagok</a>
+      <a href="szerszamok.html" class="nav-btn">Szerszámok</a>
+      <a href="csavarhuzok.html" class="nav-btn">Csavarhúzók</a>
+      <a href="furok.html" class="nav-btn">Fúrók</a>
+      <a href="blog.html" class="nav-btn">Blog</a>
+    </nav>
+  </header>
+  <main>
+    <table>
+      <tr>
+        <th>Név</th>
+        <th>Sűrűség</th>
+        <th>Szín</th>
+        <th>Felhasználás</th>
+      </tr>
+      <tr>
+        <td>
+          <span class="fa-minta-dot" style="background-image: url('nyir.minta.jpg');"></span>
+          <span class="fa-nev">Nyír</span>
+        </td>
+        <td>600-700 kg/m³</td>
+        <td>Világossárga, enyhén vöröses árnyalat</td>
+        <td>Bútor, rétegelt lemez, belsőépítészet</td>
+      </tr>
+    </table>
+    <section>
+      <h2>Nyírfa jellemzői</h2>
+      <ul>
+        <li><b>Tartósság:</b> Közepesen tartós, főleg beltéri használatra ajánlott.</li>
+        <li><b>Megmunkálhatóság:</b> Jól vágható, csiszolható, hajlítható, rétegelt lemezhez ideális.</li>
+        <li><b>Felhasználás:</b> Bútor, rétegelt lemez, játékok, belsőépítészet.</li>
+        <li><b>Szín:</b> Világossárga, enyhén vöröses, egységes szerkezetű.</li>
+      </ul>
+      <p>
+        A nyírfa világos színű, egységes szerkezetű faanyag, amelyet főleg bútorok, rétegelt lemezek és belsőépítészeti elemek készítésére használnak. Könnyen megmunkálható, hajlítható, ezért sokoldalúan alkalmazható.
+      </p>
+    </section>
+  </main>
+  <footer>
+    <div>
+      <strong>Barkácsbolt</strong> &copy; 2025 – Minden jog fenntartva.<br>
+      Elérhetőség: <a href="mailto:info@barkacsbolt.hu" style="color:#FFD700;">info@barkacsbolt.hu</a> | +36 30 123 4567
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <title>Barkácsbolt – Szerszámkatalógus</title>
+  <style>
+    body {
+      background-color: #001a4d;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #002366;
+      padding: 20px 0 10px 0;
+      text-align: center;
+    }
+    header h1 {
+      color: #FFD700;
+      margin: 0 0 10px 0;
+    }
+    nav {
+      margin: 10px 0 20px 0;
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .nav-btn {
+      background: #FFD700;
+      color: #002366;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 18px;
+      font-size: 1em;
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.2s, color 0.2s;
+      box-shadow: 0 2px 8px #0002;
+    }
+    .nav-btn:hover, .nav-btn.active {
+      background: #002366;
+      color: #FFD700;
+      border: 1px solid #FFD700;
+    }
+    main {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 30px 20px;
+    }
+    ul.szerszam-list {
+      list-style: none;
+      padding: 0;
+      margin: 40px 0 0 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      justify-content: flex-start;
+    }
+    ul.szerszam-list li {
+      background: #002366;
+      border: 1px solid #001a4d;
+      border-radius: 10px;
+      padding: 22px 36px 22px 22px;
+      min-width: 180px;
+      display: flex;
+      align-items: center;
+      box-shadow: 0 2px 8px #0003;
+      transition: box-shadow 0.2s, border-color 0.2s, background 0.2s;
+      font-size: 1.1em;
+    }
+    ul.szerszam-list li:hover {
+      box-shadow: 0 4px 16px #0006;
+      border-color: #FFD700;
+      background: #003399;
+    }
+    .szerszam-ikon {
+      display: inline-block;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      margin-right: 16px;
+      background: #FFD70022;
+      border: 2px solid #FFD700;
+      text-align: center;
+      line-height: 36px;
+      font-size: 1.5em;
+      color: #FFD700;
+      flex-shrink: 0;
+    }
+    .szerszam-link {
+      color: #FFD700;
+      font-weight: bold;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .szerszam-link:hover {
+      color: #fff;
+      text-decoration: underline;
+    }
+    footer {
+      background: #002366;
+      color: #FFD700;
+      text-align: center;
+      padding: 18px 0 10px 0;
+      margin-top: 40px;
+      font-size: 1rem;
+    }
+    @media (max-width: 700px) {
+      main {
+        padding: 10px;
+      }
+      ul.szerszam-list {
+        gap: 10px;
+      }
+      ul.szerszam-list li {
+        min-width: 120px;
+        padding: 12px 14px 12px 12px;
+        font-size: 1em;
+      }
+      .szerszam-ikon {
+        width: 24px;
+        height: 24px;
+        font-size: 1em;
+        line-height: 24px;
+        margin-right: 8px;
+      }
+      nav {
+        gap: 6px;
+      }
+      .nav-btn {
+        padding: 8px 10px;
+        font-size: 0.95em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Szerszámkatalógus</h1>
+    <nav>
+      <a href="index.html" class="nav-btn">Főoldal</a>
+      <a href="festekek.html" class="nav-btn">Festékek</a>
+      <a href="faanyagok.html" class="nav-btn">Faanyagok</a>
+      <a href="szerszamok.html" class="nav-btn active">Szerszámok</a>
+      <a href="csavarhuzok.html" class="nav-btn">Csavarhúzók</a>
+      <a href="furok.html" class="nav-btn">Fúrók</a>
+      <a href="blog.html" class="nav-btn">Blog</a>
+    </nav>
+  </header>
+  <main>
+    <ul class="szerszam-list">
+      <li>
+        <span class="szerszam-ikon">🔩</span>
+        <a class="szerszam-link" href="furok.html">Fúrók</a>
+      </li>
+      <li>
+        <span class="szerszam-ikon">💦</span>
+        <a class="szerszam-link" href="magasm.html">Magasnyomású mosók</a>
+      </li>
+      <li>
+        <span class="szerszam-ikon">🪛</span>
+        <a class="szerszam-link" href="csavarhuzok.html">Csavarhúzók</a>
+      </li>
+      <li>
+        <span class="szerszam-ikon">🔧</span>
+        <a class="szerszam-link" href="kezisz.html">Kézi szerszámok</a>
+      </li>
+      <li>
+        <span class="szerszam-ikon">🌱</span>
+        <a class="szerszam-link" href="kertisz.html">Kerti szerszámok</a>
+      </li>
+    </ul>
+  </main>
+  <footer>
+    <div>
+      <strong>Barkácsbolt</strong> &copy; 2025 – Minden jog fenntartva.<br>
+      Elérhetőség: <a href="mailto:info@barkacsbolt.hu" style="color:#FFD700;">info@barkacsbolt.hu</a> | +36 30 123 4567
+    </div>
+  </footer>
+</body>
+</html>
