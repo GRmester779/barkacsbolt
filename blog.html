@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <title>Barkácsbolt – Blog</title>
+  <style>
+    body {
+      background-color: #001a4d;
+      color: white;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      background: #002366;
+      padding: 20px 0 10px 0;
+      text-align: center;
+      position: relative;
+      box-shadow: 0 2px 8px #0006;
+      min-height: 80px;
+    }
+    .logo {
+      position: absolute;
+      top: 16px;
+      left: 24px;
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: #FFD700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 8px #0003;
+      border: 2px solid #fff;
+    }
+    .logo img {
+      width: 38px;
+      height: 38px;
+      object-fit: contain;
+      border-radius: 8px;
+      display: block;
+    }
+    header h1 {
+      color: #FFD700;
+      margin: 0 0 10px 0;
+      letter-spacing: 1px;
+    }
+    nav {
+      margin: 10px 0 20px 0;
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .nav-btn {
+      background: #FFD700;
+      color: #002366;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 18px;
+      font-size: 1em;
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.2s, color 0.2s;
+      box-shadow: 0 2px 8px #0002;
+    }
+    .nav-btn:hover, .nav-btn.active {
+      background: #002366;
+      color: #FFD700;
+      border: 1px solid #FFD700;
+    }
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 30px 20px;
+      flex: 1 0 auto;
+    }
+    .team-section {
+      display: flex;
+      gap: 32px;
+      justify-content: center;
+      align-items: flex-end;
+      margin-bottom: 38px;
+      margin-top: 10px;
+    }
+    .avatar {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+    .avatar-circle {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: #FFD700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 8px #0003;
+      border: 3px solid #002366;
+      margin-bottom: 4px;
+    }
+    .avatar-img {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      object-fit: cover;
+      background: #fff;
+      border: 2px solid #fff;
+      box-shadow: 0 1px 4px #0002;
+    }
+    .avatar-name {
+      color: #FFD700;
+      font-weight: bold;
+      font-size: 1em;
+      margin-top: 2px;
+      text-align: center;
+    }
+    .avatar-desc {
+      color: #b0b0b0;
+      font-size: 0.95em;
+      text-align: center;
+      margin-bottom: 2px;
+    }
+    details {
+      background: #003399;
+      border-radius: 8px;
+      margin-bottom: 22px;
+      box-shadow: 0 2px 8px #0003;
+      color: #fff;
+    }
+    summary {
+      cursor: pointer;
+      font-size: 1.15em;
+      font-weight: bold;
+      padding: 16px 24px;
+      color: #FFD700;
+      outline: none;
+      user-select: none;
+    }
+    details[open] summary {
+      border-bottom: 1px solid #FFD700;
+      background: #002366;
+    }
+    .blog-content {
+      padding: 18px 24px 18px 24px;
+    }
+    .blog-content h3 {
+      color: #FFD700;
+      margin-top: 0;
+    }
+    .blog-content ul {
+      margin: 0 0 12px 18px;
+    }
+    .blog-content p {
+      margin-bottom: 10px;
+    }
+    footer {
+      background: #002366;
+      color: #FFD700;
+      text-align: center;
+      padding: 18px 0 10px 0;
+      margin-top: 40px;
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+    @media (max-width: 700px) {
+      main {
+        padding: 10px;
+      }
+      summary, .blog-content {
+        padding: 10px 8px;
+      }
+      details {
+        font-size: 0.98em;
+      }
+      nav {
+        gap: 6px;
+      }
+      .nav-btn {
+        padding: 8px 10px;
+        font-size: 0.95em;
+      }
+      .team-section {
+        gap: 10px;
+      }
+      .avatar-circle {
+        width: 48px;
+        height: 48px;
+      }
+      .avatar-img {
+        width: 38px;
+        height: 38px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="logo.png" alt="">
+    </div>
+    <h1>Barkácsbolt Blog</h1>
+    <nav>
+      <a href="index.html" class="nav-btn">Főoldal</a>
+      <a href="festekek.html" class="nav-btn">Festékek</a>
+      <a href="faanyagok.html" class="nav-btn">Faanyagok</a>
+      <a href="szerszamok.html" class="nav-btn">Szerszámok</a>
+      <a href="csavarhuzok.html" class="nav-btn">Csavarhúzók</a>
+      <a href="furok.html" class="nav-btn">Fúrók</a>
+      <a href="blog.html" class="nav-btn active">Blog</a>
+    </nav>
+  </header>
+  <main>
+    <section class="team-section">
+      <div class="avatar">
+        <div class="avatar-circle">
+          <img class="avatar-img" src="taki.png" alt="Barna hajú csapattag">
+        </div>
+        <div class="avatar-name">Máté</div>
+        <div class="avatar-desc">Igazgató</div>
+      </div>
+      <div class="avatar">
+        <div class="avatar-circle">
+          <img class="avatar-img" src="avatar-1294783_640.png" alt="Szőke csapattag">
+        </div>
+        <div class="avatar-name">Robi</div>
+        <div class="avatar-desc">Igazgató helyettes</div>
+      </div>
+      <div class="avatar">
+        <div class="avatar-circle">
+          <img class="avatar-img" src="dani.png" alt="Kopasz csapattag">
+        </div>
+        <div class="avatar-name">Dani</div>
+        <div class="avatar-desc">Igazgató helyettes</div>
+      </div>
+    </section>
+    <details>
+      <summary>2024</summary>
+      <div class="blog-content">
+        <h3>5 tipp, hogy a festés otthon is profi legyen</h3>
+        <p><b>Dátum:</b> 2024.05.10. &nbsp; <b>Szerző:</b> Takács Máté</p>
+        <ul>
+          <li>Alapos előkészítés: tisztítsd meg a falat, javítsd ki a hibákat, használj alapozót!</li>
+          <li>Minőségi eszközök: jó ecsettel és hengerrel szebb lesz a végeredmény.</li>
+          <li>Rétegezés: inkább több vékony réteget vigyél fel, mint egy vastagot.</li>
+          <li>Száradási idő: tartsd be a festék száradási idejét, ne siess!</li>
+          <li>Takarás: fedd le a padlót, bútorokat, hogy ne legyen festékes minden.</li>
+        </ul>
+        <p>Ha ezeket betartod, a végeredmény garantáltan profi lesz!</p>
+        <hr>
+        <h3>Fúrók és csavarhúzók: Melyiket válaszd?</h3>
+        <p><b>Dátum:</b> 2024.04.18. &nbsp; <b>Szerző:</b> Karacs Dániel</p>
+        <ul>
+          <li>Akkus fúró: gyors, kényelmes, de figyelj az akkumulátor töltöttségére.</li>
+          <li>Csavarhúzó: egyszerűbb munkákhoz, precízebb meghúzáshoz ideális.</li>
+          <li>Bitek: mindig a csavar fejéhez illő bitet használj, így nem sérül a csavar.</li>
+          <li>Torx, PH, lapos: ismerd fel a különböző fejeket, és legyen otthon többféle!</li>
+        </ul>
+        <p>Ha bizonytalan vagy, kérj tanácsot üzletünkben vagy olvass tovább a blogon!</p>
+      </div>
+    </details>
+    <details>
+      <summary>2023</summary>
+      <div class="blog-content">
+        <h3>Hogyan válasszunk faanyagot bútorhoz?</h3>
+        <p><b>Dátum:</b> 2023.11.02. &nbsp; <b>Szerző:</b> Takács Máté</p>
+        <ul>
+          <li>Tölgy: tartós, kemény, szép erezetű, de drágább.</li>
+          <li>Bükk: jó ár-érték arány, könnyen megmunkálható.</li>
+          <li>Fenyő: olcsóbb, puhább, de kevésbé tartós.</li>
+          <li>Felületkezelés: mindig kezeld le a fát, hogy tartós legyen!</li>
+        </ul>
+        <p>Válassz igényeid szerint, és kérj segítséget szakértőinktől!</p>
+        <hr>
+        <h3>Miért fontos a jó szerszám?</h3>
+        <p><b>Dátum:</b> 2023.07.15. &nbsp; <b>Szerző:</b> Gurisatti Róbert</p>
+        <ul>
+          <li>Minőség: a jó szerszám hosszabb ideig bírja, pontosabb munkát tesz lehetővé.</li>
+          <li>Ápolás: tisztítsd és olajozd a szerszámokat rendszeresen.</li>
+          <li>Tárolás: száraz, biztonságos helyen tartsd őket.</li>
+          <li>Biztonság: mindig a feladathoz illő szerszámot használj!</li>
+        </ul>
+        <p>Egy jó szerszám a barkácsoló legjobb barátja!</p>
+      </div>
+    </details>
+    <details>
+      <summary>2022</summary>
+      <div class="blog-content">
+        <h3>Festékek: színek, típusok, felhasználás</h3>
+        <p><b>Dátum:</b> 2022.09.08. &nbsp; <b>Szerző:</b> Takács Máté</p>
+        <ul>
+          <li>Beltéri festékek: könnyen tisztíthatók, sokféle színben elérhetők.</li>
+          <li>Kültéri festékek: időjárásállók, tartósabbak.</li>
+          <li>Színek: a világos színek tágítják a teret, a sötétek meghittebbé teszik.</li>
+          <li>Felhasználás: mindig a felülethez illő festéket válassz!</li>
+        </ul>
+        <p>Ha bizonytalan vagy, kérj tanácsot kollégáinktól vagy olvass tovább a blogon!</p>
+      </div>
+    </details>
+  </main>
+  <footer>
+    <div>
+      <strong>Barkácsbolt</strong> &copy; 2025 – Minden jog fenntartva.<br>
+      Elérhetőség: <a href="mailto:info@barkacsbolt.hu" style="color:#FFD700;">info@barkacsbolt.hu</a> | +36 30 123 4567
+    </div>
+  </footer>
+</body>
+</html>

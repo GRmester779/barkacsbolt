@@ -1,0 +1,227 @@
+
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <title>Barkácsbolt – Fúrók</title>
+  <style>
+    body {
+      background-color: #001a4d;
+      color: white;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #002366;
+      padding: 20px 0 10px 0;
+      text-align: center;
+    }
+    header h1 {
+      color: #FFD700;
+      margin: 0 0 10px 0;
+    }
+    nav {
+      margin: 10px 0 20px 0;
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .nav-btn {
+      background: #FFD700;
+      color: #002366;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 18px;
+      font-size: 1em;
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.2s, color 0.2s;
+      box-shadow: 0 2px 8px #0002;
+    }
+    .nav-btn:hover, .nav-btn.active {
+      background: #002366;
+      color: #FFD700;
+      border: 1px solid #FFD700;
+    }
+    main {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 30px 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 30px 0 0 0;
+      background: #002366;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+    table, th, td {
+      border: 1px solid #001a4d;
+    }
+    th, td {
+      padding: 15px;
+      text-align: left;
+    }
+    th {
+      background: #003399;
+      color: #FFD700;
+    }
+    .furo-img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 2px solid #FFD700;
+      margin-right: 12px;
+      vertical-align: middle;
+      background: #fff;
+    }
+    .furo-nev {
+      font-weight: bold;
+      color: #FFD700;
+      font-size: 1.1em;
+    }
+    .stock-available {
+      color: #00ff66;
+      font-weight: bold;
+    }
+    .stock-unavailable {
+      color: #ff4d4d;
+      font-weight: bold;
+    }
+    .furo-gallery {
+      display: flex;
+      gap: 15px;
+      margin: 30px 0 0 0;
+      flex-wrap: wrap;
+    }
+    .furo-gallery img {
+      background: #fff;
+      border-radius: 8px;
+      border: 2px solid #003399;
+      padding: 4px;
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      box-shadow: 0 2px 8px #0004;
+      transition: transform 0.2s;
+    }
+    .furo-gallery img:hover {
+      transform: scale(1.05);
+      border-color: #FFD700;
+    }
+    footer {
+      background: #002366;
+      color: #FFD700;
+      text-align: center;
+      padding: 18px 0 10px 0;
+      margin-top: 40px;
+      font-size: 1rem;
+    }
+    @media (max-width: 700px) {
+      main {
+        padding: 10px;
+      }
+      .furo-img {
+        width: 40px;
+        height: 40px;
+        margin-right: 6px;
+      }
+      th, td {
+        font-size: 14px;
+      }
+      .furo-gallery img {
+        width: 90px;
+        height: 90px;
+      }
+      .furo-gallery {
+        gap: 8px;
+      }
+      nav {
+        gap: 6px;
+      }
+      .nav-btn {
+        padding: 8px 10px;
+        font-size: 0.95em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Fúrók</h1>
+    <nav>
+      <a href="index.html" class="nav-btn">Főoldal</a>
+      <a href="festekek.html" class="nav-btn">Festékek</a>
+      <a href="faanyagok.html" class="nav-btn">Faanyagok</a>
+      <a href="szerszamok.html" class="nav-btn">Szerszámok</a>
+      <a href="csavarhuzok.html" class="nav-btn">Csavarhúzók</a>
+      <a href="furok.html" class="nav-btn active">Fúrók</a>
+      <a href="blog.html" class="nav-btn">Blog</a>
+
+    </nav>
+  </header>
+  <main>
+    <table>
+      <tr>
+        <th>Név</th>
+        <th>Leírás</th>
+        <th>Ár</th>
+        <th>Készlet</th>
+      </tr>
+      <tr>
+        <td>
+          <img class="furo-img" src="furo4.jpg" alt="Sárga fúró">
+          <span class="furo-nev">Sárga fúró</span>
+        </td>
+        <td>Nagy teljesítményű, sárga színű fúró, fémhez és fához.</td>
+        <td>15 000 Ft</td>
+        <td class="stock-available">1–5 db raktáron</td>
+      </tr>
+      <tr>
+        <td>
+          <img class="furo-img" src="furo1.jpg" alt="Piros fúró">
+          <span class="furo-nev">Piros fúró</span>
+        </td>
+        <td>Kompakt, piros színű fúró, otthoni használatra.</td>
+        <td>22 000 Ft</td>
+        <td class="stock-unavailable">Csak rendelésre</td>
+      </tr>
+      <tr>
+        <td>
+          <img class="furo-img" src="furo3.jpg" alt="Zöld fúró">
+          <span class="furo-nev">Zöld fúró</span>
+        </td>
+        <td>Akkumulátoros fúró, zöld színű, hordozható.</td>
+        <td>28 000 Ft</td>
+        <td class="stock-available">5+ db raktáron</td>
+      </tr>
+      <tr>
+        <td>
+          <img class="furo-img" src="furo2.jpg" alt="Kék fúró">
+          <span class="furo-nev">Kék fúró</span>
+        </td>
+        <td>Ipari felhasználásra alkalmas, kék színű, nagy nyomatékú fúró.</td>
+        <td>45 000 Ft</td>
+        <td class="stock-unavailable">Csak rendelésre</td>
+      </tr>
+    </table>
+    <div class="furo-gallery">
+      <img src="furo1.jpg" alt="Piros fúró">
+      <img src="furo2.jpg" alt="Kék fúró">
+      <img src="furo3.jpg" alt="Zöld fúró">
+      <img src="furo4.jpg" alt="Sárga fúró">
+    </div>
+  </main>
+  <footer>
+    <div>
+      <strong>Barkácsbolt</strong> &copy; 2025 – Minden jog fenntartva.<br>
+      Elérhetőség: <a href="mailto:info@barkacsbolt.hu" style="color:#FFD700;">info@barkacsbolt.hu</a> | +36 30 123 4567
+    </div>
+  </footer>
+</body>
+</html>
